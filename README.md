@@ -1,6 +1,7 @@
 # **Riset Informatika ( C )**
 
 Nama : Novandi Kevin Pratama
+
 NPM : 20081010005
 
 ## Table of Content
