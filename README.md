@@ -7,13 +7,13 @@ Nama : Novandi Kevin Pratama
 NPM : 20081010005
 
 ## Daftar Isi
-1. [Dataset](##dataset)
-2. [Latar Belakang](##latar-belakang)
-3. [Tujuan](##tujuan)
-4. [Rumusan Masalah](##rumusan-masalah)
-5. [Teori Terkait](##teori-terkait)
-6. [Metode yang Digunakan](##metode-yang-digunakan)
-7. [Hasil](##hasil)
+1. [Dataset](#dataset)
+2. [Latar Belakang](#latar-belakang)
+3. [Tujuan](#tujuan)
+4. [Rumusan Masalah](#rumusan-masalah)
+5. [Teori Terkait](#teori-terkait)
+6. [Metode yang Digunakan](#metode-yang-digunakan)
+7. [Hasil](#hasil)
 
 
 ## Dataset
