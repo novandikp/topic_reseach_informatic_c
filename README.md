@@ -1,101 +1,92 @@
 # **Riset Informatika ( C )**
 
+# Deteksi Serangan DDoS dengan Support Vector Machine
+
 Nama : Novandi Kevin Pratama
 
 NPM : 20081010005
 
-## Table of Content
-- [Topik Penelitian](#topik-penelitian)
-  1. [Segmentasi Vocal dan Instrumen Musik dengan Mel-Frequency Cepstral Coefficient dan K-Means Clustering](#topik-1-segmentasi-vocal-dan-instrumen-musik-dengan-mel-frequency-cepstral-coefficient-dan-k-means-clustering)
-     - [Persoalan Praktis](#persoalan-praktis)
-     - [Research Questions](#research-questions)
-     - [Teori Yang Berkaitan](#teori-yang-berkaitan)
-  2. [Klasifikasi Diabetes Resinopati dengan Gabor Filter dan Support Vector Machine](#topik-2-klasifikasi-diabetes-resinopati-dengan-gabor-filter-dan-support-vector-machine)
-     - [Persoalan Praktis](#persoalan-praktis-1)
-     - [Research Questions](#research-questions-1)
-     - [Teori Yang Berkaitan](#teori-yang-berkaitan-1)
+## Daftar Isi
+1. [Dataset](##dataset)
+2. [Latar Belakang](##latar-belakang)
+3. [Tujuan](##tujuan)
+4. [Rumusan Masalah](##rumusan-masalah)
+5. [Teori Terkait](##teori-terkait)
+6. [Metode yang Digunakan](##metode-yang-digunakan)
+7. [Hasil](##hasil)
 
-## Topik Penelitian
 
-1. Segmentasi Vocal dan Instrumen Musik dengan Mel-Frequency Cepstral Coefficient dan K-Means Clustering
-2. Klasifikasi Diabetes Resinopati dengan Gabor Filter dan Support Vector Machine
+## Dataset
+<a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019/">DDoS Evaluation Dataset (CIC-DDoS2019)</a>
 
-## Topik 1. Segmentasi Vocal dan Instrumen Musik dengan Mel-Frequency Cepstral Coefficient dan K-Means Clustering
 
-Penelitian terkait dengan pengolahan sinyal audio, khususnya analisis musik. Penelitian ini bertujuan untuk membagi sinyal audio menjadi segmen-segmen yang terdiri dari vokal dan instrumen musik
+## Latar Belakang
+DDoS (Distributed Denial of Service) adalah jenis serangan yang dilakukan dengan cara membanjiri lalu lintas jaringan dengan paket data yang tidak berguna. Tujuan dari serangan ini adalah untuk membuat sumber daya jaringan (misalnya: bandwidth, memori, atau CPU) tidak tersedia untuk pengguna yang sah. Serangan DDoS dapat dilakukan dengan menggunakan satu komputer yang terinfeksi malware. Namun, serangan DDoS modern lebih sering dilakukan dengan menggunakan botnet. Serangan DDoS dapat menyebabkan kerugian finansial dan reputasi yang signifikan bagi organisasi yang menjadi korban serangan. Oleh karena itu, penting untuk mengembangkan teknik deteksi DDoS yang efektif. 
 
-### Persoalan Praktis
 
-1. Kualitas data
+## Tujuan
+Membuat model machine learning untuk mendeteksi serangan DDoS dengan menggunakan dataset DDoS Evaluation Dataset (CIC-DDoS2019) yang diambil dari Kaggle.
 
-Kualitas data audio dapat dipengaruhi oleh berbagai faktor, seperti kondisi perekaman, jenis mikrofon yang digunakan, dan tingkat kebisingan lingkungan. Data audio yang berkualitas buruk dapat menyebabkan hasil segmentasi yang tidak akurat atau tidak konsisten. Misalnya, data audio yang berisi kebisingan latar belakang yang tinggi dapat menyebabkan algoritma K-Means Clustering salah mengkategorikan noise sebagai vokal atau instrumen musik.
+## Rumusan Masalah
+1. Bagaimana cara mendeteksi serangan DDoS dengan menggunakan dataset DDoS Evaluation Dataset (CIC-DDoS2019)?
+2. Bagaimana cara membangun model machine learning untuk mendeteksi serangan DDoS dengan menggunakan dataset DDoS Evaluation Dataset (CIC-DDoS2019)?
+3. Bagaimana cara mengevaluasi model machine learning untuk mendeteksi serangan DDoS dengan menggunakan dataset DDoS Evaluation Dataset (CIC-DDoS2019)?
 
-2. Pilihan parameter
+## Teori terkait
+**1. Support Vector Machine**
 
-MFCC dan K-Means Clustering memiliki berbagai parameter yang dapat disesuaikan untuk meningkatkan akurasi segmentasi. Parameter-parameter ini dapat mencakup jumlah fitur MFCC, ukuran jendela FFT, dan jumlah cluster K-Means. Pemilihan parameter yang tidak tepat dapat menyebabkan hasil segmentasi yang tidak akurat. Misalnya, pemilihan jumlah fitur MFCC yang terlalu kecil dapat menyebabkan algoritma MFCC kehilangan informasi penting yang dapat digunakan untuk membedakan vokal dan instrumen musik.
+Support Vector Machine (SVM) adalah algoritma pembelajaran mesin yang dapat digunakan untuk melakukan klasifikasi maupun regresi. SVM melakukan klasifikasi dengan membangun hyperplane dalam ruang multidimensi yang dapat memisahkan dua kelas. Hyperplane adalah sebuah fungsi yang dapat digunakan untuk melakukan pemisahan antar kelas. Hyperplane yang memisahkan dua kelas dengan margin terbesar disebut dengan Maximal Margin Hyperplane. Margin adalah jarak antara hyperplane dengan sampel terdekat. Semakin besar margin, semakin baik pula model yang dihasilkan.
 
-### Research Questions
+**2. DDos**
+   
+DDoS (Distributed Denial of Service) adalah jenis serangan yang dilakukan dengan cara membanjiri lalu lintas jaringan dengan paket data yang tidak berguna. Tujuan dari serangan ini adalah untuk membuat sumber daya jaringan (misalnya: bandwidth, memori, atau CPU) tidak tersedia untuk pengguna yang sah. Serangan DDoS dapat dilakukan dengan menggunakan satu komputer yang terinfeksi malware. Namun, serangan DDoS modern lebih sering dilakukan dengan menggunakan botnet.
 
-1. Bagaimana cara meningkatkan akurasi segmentasi vocal dan instrumen musik dengan MFCC dan K-Means Clustering?
-2. Bagaimana cara mengevaluasi akurasi segmentasi vocal dan instrumen musik dengan MFCC dan K-Means Clustering?
-3. Bagaimana cara mengatasi data yang tidak lengkap atau tidak seimbang dalam segmentasi vocal dan instrumen musik?
-4. Bagaimana cara mengatasi data yang bervariasi dalam segmentasi vocal dan instrumen musik?
+**3. Normalisasi Data** 
 
-### Teori Yang Berkaitan
+Normalisasi data adalah proses mengubah nilai-nilai dari beberapa variabel sehingga variabel-variabel tersebut memiliki skala yang sama. Normalisasi data dilakukan untuk menghindari bias yang mungkin terjadi pada data. Normalisasi data dapat dilakukan dengan menggunakan MinMaxScaler. MinMaxScaler akan mengubah nilai-nilai dari suatu fitur menjadi nilai antara 0 dan 1. MinMaxScaler bekerja dengan cara mengurangi nilai terkecil dari setiap fitur dan membaginya dengan rentang nilai yang ada.
 
-1. MFCC (Mel-Frequency Cepstral Coefficient)
+**4. Label Encoding**
 
-MFCC adalah singkatan dari Mel-Frequency Cepstral Coefficient. MFCC adalah fitur ekstraksi yang digunakan untuk mewakili karakteristik frekuensi sinyal audio. MFCC dihitung dengan transformasi Fourier mel, yang merupakan transformasi Fourier yang dimodifikasi untuk meniru cara telinga manusia mendengar. MFCC terdiri dari sejumlah koefisien, yang masing-masing mewakili karakteristik frekuensi tertentu.
+Label Encoding adalah proses mengubah nilai-nilai dari suatu fitur menjadi nilai numerik. Label Encoding dilakukan untuk mengubah nilai-nilai dari fitur kategorikal menjadi nilai numerik. Label Encoding dapat dilakukan dengan menggunakan LabelEncoder. LabelEncoder akan mengubah nilai-nilai dari suatu fitur menjadi nilai numerik secara berurutan.
 
-2. K Means Clustering
 
-K Means Clustering adalah algoritma clustering yang digunakan untuk mengelompokkan data ke dalam sejumlah cluster. K Means Clustering bekerja dengan cara memilih sejumlah titik pusat cluster (centroid) secara acak. Kemudian, data dikelompokkan ke dalam cluster yang terdekat dengan centroidnya. Proses ini diulangi hingga centroid tidak berubah lagi.
+## Metode yang digunakan
+1. Data Preprocessing
+2. Data Splitting
+3. Model Training
+4. Model Evaluation
 
-3. Clustering
+### **Data Preprocessing**
+Data preprocessing dilakukan untuk membersihkan data dari noise dan data yang tidak berguna. Data preprocessing yang dilakukan adalah sebagai berikut:
+1. Data Cleaning
+2. Normalisasi data menggunakan MinMaxScaler
+3. Label Encoding
+4. Feature Selection menggunakan SelectKBest dan ChiSquare
 
-Clustering adalah teknik pembelajaran mesin yang digunakan untuk mengelompokkan data ke dalam sejumlah cluster. Data dalam satu cluster memiliki karakteristik yang mirip, sedangkan data dalam cluster yang berbeda memiliki karakteristik yang berbeda.
 
-4. Segmentasi
+### **Data Splitting**
+Data splitting dilakukan untuk membagi data menjadi data training dan data testing. Data training digunakan untuk melatih model sedangkan data testing digunakan untuk menguji model. Data splitting ditetapkan dengan rasio 80:20. Data training sebanyak 80% dan data testing sebanyak 20%. 
 
-Segmentasi adalah teknik pengolahan sinyal yang digunakan untuk membagi sinyal menjadi segmen-segmen yang lebih kecil. Segmentasi dapat digunakan untuk berbagai aplikasi, seperti analisis musik, pemrosesan bahasa alami, dan sintesis musik.
+### **Model Training**
+Training model dilakukan dengan menggunakan algoritma SVM (Support Vector Machine). 
 
-## Topik 2. Klasifikasi Diabetes Resinopati dengan Gabor Filter dan Support Vector Machine
+### **Model Evaluation**
+Evaluation model dilakukan dengan menggunakan confusion matrix. Confusion matrix digunakan untuk menghitung nilai akurasi, presisi, recall, dan f1-score. Confusion matrix juga digunakan untuk menghitung nilai True Positive, True Negative, False Positive, dan False Negative.
 
-### Persoalan Praktis
 
-1. Kualitas data
+## Hasil
+### Data Distribution
+![Data Distribution](images/data_distribution.png)
 
-Kualitas data retina dapat dipengaruhi oleh berbagai faktor, seperti kualitas kamera, kondisi pasien, dan kondisi pencahayaan. Data retina yang berkualitas buruk dapat menyebabkan hasil klasifikasi yang tidak akurat atau tidak konsisten. Misalnya, data retina yang berisi noise atau artefak dapat menyebabkan algoritma Support Vector Machine salah mengkategorikan drusen sebagai edema.
+### Confusion Matrix
+![Confusion Matrix](images/confusion_matrix.png)
 
-2. Pilihan parameter
+### Classification Report
+               precision    recall  f1-score   support
 
-Support Vector Machine memiliki berbagai parameter yang dapat disesuaikan untuk meningkatkan akurasi klasifikasi. Parameter-parameter ini dapat kernel Support Vector Machine, dan parameter C. Pemilihan parameter yang tidak tepat dapat menyebabkan hasil klasifikasi yang tidak akurat.
+      Benign       1.00      0.93      0.96     19417
+        DDoS       0.95      1.00      0.97     25732
+    accuracy                           0.97     45149
+    macro avg      0.97      0.96      0.97     45149
+    weighted avg   0.97      0.97      0.97     45149
 
-3. Privasi data
-
-Penelitian tentang klasifikasi diabetes retinopati harus memperhatikan etika, seperti privasi pasien dan keamanan data. Hal ini penting untuk melindungi privasi pasien dan mencegah penyalahgunaan data.
-
-### Research Questions
-
-1. Bagaimana cara meningkatkan kualitas data retina untuk klasifikasi diabetes retinopati?
-2. Bagaimana cara memilih parameter Support Vector Machine yang optimal untuk klasifikasi diabetes retinopati?
-3. Bagaimana cara mengevaluasi akurasi klasifikasi dengan berbagai parameter Support Vector Machine?
-4. Bagaimana cara melindungi privasi pasien saat menggunakan data retina untuk penelitian?
-
-### Teori Yang Berkaitan
-
-1. Diabetes resinopati
-
-Diabetes resinopati adalah komplikasi dari diabetes mellitus yang dapat menyebabkan kebutaan. Diabetes mellitus adalah penyakit kronis yang ditandai dengan kadar gula darah yang tinggi. Diabetes mellitus dapat menyebabkan kerusakan pada pembuluh darah, termasuk pembuluh darah di retina. Kerusakan pembuluh darah di retina dapat menyebabkan munculnya exudate, yaitu kumpulan cairan yang keluar dari pembuluh darah retina yang rusak. Exudate dapat terlihat sebagai bintik putih atau kuning pada citra fundus retina.
-
-2. Klasifikasi
-
-Klasifikasi adalah proses membagi data ke dalam dua atau lebih kelas. Kelas adalah kumpulan data yang memiliki karakteristik yang sama.
-
-3. SVM (Support Vector Machine)
-
-SVM (Support Vector Machine) adalah algoritma pembelajaran mesin yang dapat digunakan untuk klasifikasi, regresi, dan clustering. SVM bekerja dengan menemukan hyperplane yang memisahkan dua kelas data dengan margin yang paling besar. Hyperplane adalah garis atau bidang yang memisahkan dua atau lebih kelas data. Margin adalah jarak antara hyperplane dan titik-titik data yang paling dekat dengan hyperplane. SVM bertujuan untuk menemukan hyperplane dengan margin yang paling besar.
-
-4. Gabor filter
-
-Gabor filter adalah filter linier yang dapat digunakan untuk mengekstrak fitur tekstur dari citra. Gabor filter memiliki karakteristik frekuensi dan arah yang dapat digunakan untuk mendeteksi fitur-fitur tertentu dalam citra.
