@@ -14,7 +14,8 @@ NPM : 20081010005
 5. [Teori Terkait](#teori-terkait)
 6. [Metode yang Digunakan](#metode-yang-digunakan)
 7. [Hasil](#hasil)
-
+8. [Referensi](#referensi)
+9. [Video](#video)
 
 ## Dataset
 <a href="https://www.kaggle.com/datasets/aymenabb/ddos-evaluation-dataset-cic-ddos2019/">DDoS Evaluation Dataset (CIC-DDoS2019)</a>
@@ -90,3 +91,12 @@ Evaluation model dilakukan dengan menggunakan confusion matrix. Confusion matrix
     macro avg      0.97      0.96      0.97     45149
     weighted avg   0.97      0.97      0.97     45149
 
+
+## Referensi
+
+1. H. Tekleselassie, “A deep learning approach for ddos attack detection using supervised learning,” MATEC Web of Conferences, vol. 348, p. 01012, 2021. 
+2. Y. Wu, “DDos attack detection method based on machine learning,” Applied and Computational Engineering, vol. 18, no. 1, pp. 88–95, 2023.
+
+## Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GhG2qG5sRcc?si=4OHX4vzVlhX3C6Te" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
