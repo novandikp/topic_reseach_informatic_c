@@ -99,4 +99,4 @@ Evaluation model dilakukan dengan menggunakan confusion matrix. Confusion matrix
 
 ## Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GhG2qG5sRcc?si=4OHX4vzVlhX3C6Te" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Video Running](https://img.youtube.com/vi/GhG2qG5sRcc/0.jpg)](https://www.youtube.com/watch?v=GhG2qG5sRcc)
